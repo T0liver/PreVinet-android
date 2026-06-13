@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PreViNet</string>
+
+    <!-- Consent -->
+    <string name="consent_title">Research data notice</string>
+    <string name="consent_sharing_title">What you are sharing:</string>
+    <string name="consent_item_photos">Photos of diseased grape leaves</string>
+    <string name="consent_item_gps">GPS location from photos (only if you allow it)</string>
+    <string name="consent_item_ip">Your IP address</string>
+    <string name="consent_purpose">Purpose: training a grape disease AI model for university research. Data is used only for this research.</string>
+    <string name="consent_agree">I agree and continue</string>
+    <string name="consent_dismiss_note">You can close this, but you\'ll need to agree before submitting.</string>
+    <string name="review_data_notice">Review data notice</string>
+
+    <!-- Submit screen -->
+    <string name="submit_subtitle">Grape disease photos</string>
+    <string name="history_cd">My submissions</string>
+    <string name="offline_banner">You\'re offline — photos will be saved and uploaded automatically when you\'re back online.</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="add_from_gallery">Add from gallery</string>
+    <plurals name="adding_photos">
+        <item quantity="one">Adding %1$d photo…</item>
+        <item quantity="other">Adding %1$d photos…</item>
+    </plurals>
+    <string name="add_more">Add more</string>
+    <string name="remove_photo_cd">Remove photo %1$d</string>
+    <string name="photo_thumb_box_cd">Photo %1$d, box drawn</string>
+    <string name="photo_thumb_nobox_cd">Photo %1$d, no box</string>
+    <plurals name="photo_count">
+        <item quantity="one">%1$d photo</item>
+        <item quantity="other">%1$d photos</item>
+    </plurals>
+    <string name="photos_meta">%1$s · %2$s</string>
+
+    <string name="select_disease_placeholder">Select disease…</string>
+    <string name="select_disease_title">Select disease</string>
+
+    <string name="tier1_label">Basic · Tier 1</string>
+    <string name="tier1_hint">Add a disease label to improve quality</string>
+    <string name="tier2_label">Good · Tier 2</string>
+    <string name="tier2_hint">Draw a box on a photo for Gold quality</string>
+    <string name="tier3_label">Gold · Tier 3</string>
+    <string name="tier3_hint">Excellent! Your annotation is Gold quality.</string>
+    <string name="bbox_helper">Tap a photo above to draw a box around the disease.</string>
+
+    <string name="optional_section">Notes and location</string>
+    <string name="notes_label">Notes</string>
+    <string name="notes_counter">%1$d / 500</string>
+    <string name="gps_toggle">Share photo location</string>
+    <string name="gps_description">Uses the GPS stored in your photos to map disease spots. Turn off to remove location data.</string>
+
+    <plurals name="submit_online">
+        <item quantity="one">Submit %1$d photo</item>
+        <item quantity="other">Submit %1$d photos</item>
+    </plurals>
+    <plurals name="submit_offline">
+        <item quantity="one">Save %1$d photo for later</item>
+        <item quantity="other">Save %1$d photos for later</item>
+    </plurals>
+    <string name="submit_helper">Add at least one photo</string>
+    <plurals name="uploading_progress">
+        <item quantity="one">Uploading %1$d photo… %2$d%%</item>
+        <item quantity="other">Uploading %1$d photos… %2$d%%</item>
+    </plurals>
+    <string name="uploading_slow">This may take a moment on mobile data.</string>
+
+    <!-- Diseases -->
+    <string name="disease_black_rot">Black rot</string>
+    <string name="disease_black_rot_desc">Dark spots on leaves</string>
+    <string name="disease_peronospora">Downy mildew (peronospora)</string>
+    <string name="disease_peronospora_desc">Yellow-green patches</string>
+    <string name="disease_powdery_mildew">Powdery mildew</string>
+    <string name="disease_powdery_mildew_desc">White powdery coating</string>
+    <string name="disease_botrytis">Grey mould (botrytis)</string>
+    <string name="disease_botrytis_desc">Fuzzy grey growth</string>
+    <string name="disease_esca">Esca</string>
+    <string name="disease_esca_desc">Leaf scorch, tiger stripes</string>
+    <string name="disease_phomopsis">Phomopsis</string>
+    <string name="disease_phomopsis_desc">Brown spots near veins</string>
+    <string name="disease_unknown">I\'m not sure</string>
+
+    <!-- Bbox drawing -->
+    <string name="bbox_photo_index">Photo %1$d of %2$d</string>
+    <string name="bbox_instruction">Draw a box around the disease</string>
+    <string name="bbox_clear">Clear box</string>
+    <string name="bbox_confirm">Confirm box</string>
+    <string name="bbox_previous">Previous</string>
+    <string name="bbox_next">Next</string>
+    <string name="bbox_too_small">Box too small — try drawing a larger area.</string>
+    <string name="bbox_canvas_cd_drawn">Draw a bounding box by pressing and dragging. Currently: box drawn</string>
+    <string name="bbox_canvas_cd_none">Draw a bounding box by pressing and dragging. Currently: no box</string>
+
+    <!-- Result URL screen -->
+    <string name="submitted_title">Submitted!</string>
+    <plurals name="photos_received">
+        <item quantity="one">%1$d photo received</item>
+        <item quantity="other">%1$d photos received</item>
+    </plurals>
+    <string name="save_link_title">Save this link</string>
+    <string name="save_link_body">There are no accounts. This link is the only way to see and correct your results.</string>
+    <string name="copy_link">Copy link</string>
+    <string name="copied">Copied ✓</string>
+    <string name="link_copied">Link copied to clipboard</string>
+    <string name="share">Share…</string>
+    <string name="results_ready_soon">Results are usually ready within a few hours.</string>
+    <string name="open_results">Open results page</string>
+    <string name="submit_another">Submit another batch</string>
+
+    <string name="saved_title">Saved!</string>
+    <plurals name="saved_body">
+        <item quantity="one">%1$d photo will upload automatically when you\'re back online.</item>
+        <item quantity="other">%1$d photos will upload automatically when you\'re back online.</item>
+    </plurals>
+    <string name="saved_notify">You\'ll get a notification with your results link.</string>
+    <string name="view_my_submissions">View my submissions</string>
+
+    <string name="notif_preprompt">Want a reminder when your results are ready?</string>
+    <string name="notif_yes">Yes, notify me</string>
+    <string name="notif_no">No thanks</string>
+
+    <!-- Result screen -->
+    <string name="new_submission">New submission</string>
+    <string name="result_title">Segmentation Result</string>
+    <string name="tier_chip">Tier %1$d</string>
+    <string name="waiting_upload">Waiting to upload</string>
+    <string name="waiting_upload_body">These photos are saved on this phone and will upload automatically when you\'re back online.</string>
+    <string name="upload_now">Upload now</string>
+    <string name="upload_failed">Upload failed</string>
+    <string name="try_again">Try again</string>
+    <string name="delete">Delete</string>
+    <string name="processing_title">Processing your photos</string>
+    <string name="processing_body">Your photos have been received and are waiting for analysis. Results are usually ready within a few hours.</string>
+    <string name="check_results">Check for results</string>
+    <string name="not_found_title">Submission not found</string>
+    <string name="not_found_body">Please check your link. If you submitted less than an hour ago, try again shortly.</string>
+    <string name="thanks_footer">Thank you for contributing to grape disease research.</string>
+
+    <string name="mask_visibility">Mask visibility</string>
+    <string name="confidence_label">Confidence</string>
+    <string name="confidence_fmt">Confidence %1$d%%</string>
+    <string name="quality_score_fmt">Quality score %1$d%%</string>
+    <string name="looks_right">Does this look right?</string>
+    <string name="looks_good">Looks good</string>
+    <string name="correct_it">Correct it</string>
+    <string name="thanks_confirming">Thanks for confirming!</string>
+    <string name="correction_submitted_chip">Correction submitted ✓</string>
+    <string name="original_annotation_caption">Original annotation — mask not available yet</string>
+    <string name="correction_instruction">Draw the correct box around the affected area</string>
+    <string name="clear">Clear</string>
+    <string name="submit_correction">Submit correction</string>
+    <string name="saving">Saving…</string>
+    <string name="correction_saved">Correction saved — thank you!</string>
+
+    <!-- My submissions -->
+    <string name="my_submissions">My submissions</string>
+    <string name="back_cd">Back</string>
+    <string name="status_saved_offline">Saved offline</string>
+    <string name="status_uploading">Uploading</string>
+    <string name="status_failed">Failed — tap to retry</string>
+    <string name="status_processing">Processing</string>
+    <string name="status_results_ready">Results ready</string>
+    <string name="status_complete">Complete</string>
+    <string name="empty_title">No submissions yet</string>
+    <string name="empty_body">Your submitted and saved batches appear here.</string>
+    <string name="delete_dialog_title">Delete submission?</string>
+    <string name="delete_dialog_local">This also deletes your local copy of these photos.</string>
+    <string name="delete_dialog_link">Your results link will be removed from this phone.</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Notifications -->
+    <string name="channel_uploads">Upload status</string>
+    <string name="channel_results">Results ready</string>
+    <string name="notif_uploaded_title">Photos uploaded ✓</string>
+    <string name="notif_uploaded_text">Tap to open your results link — keep it safe!</string>
+    <string name="notif_results_title">Your grape disease results may be ready</string>
+    <string name="notif_results_text">Tap to see your segmentation results</string>
+    <string name="notif_uploading">Uploading photos…</string>
+
+    <!-- Errors -->
+    <string name="error_400">Invalid data. Please check your photos and try again.</string>
+    <string name="error_403">This device has been blocked from submitting.</string>
+    <string name="error_413">One or more photos is too large.</string>
+    <string name="error_422">Annotation mismatch. Please re-draw your boxes and try again.</string>
+    <string name="error_429">Daily limit reached. Your photos are saved — try again tomorrow.</string>
+    <string name="error_5xx">The server is temporarily unavailable. Your photos are saved and will retry.</string>
+    <string name="error_network">No connection. Your photos are saved and will upload automatically.</string>
+</resources>
