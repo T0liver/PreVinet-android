@@ -10,8 +10,8 @@ plugins {
 }
 
 val apiBase: String =
-    (providers.gradleProperty("PREVINET_API_BASE").orNull ?: "https://grape.example.com").trimEnd('/')
-val resultHost: String = URI(apiBase).host ?: "grape.example.com"
+    (providers.gradleProperty("PREVINET_API_BASE").orNull ?: "https://grapes.toliver.hu").trimEnd('/')
+val resultHost: String = URI(apiBase).host ?: "grapes.toliver.hu"
 
 android {
     namespace = "com.previNet.android"
