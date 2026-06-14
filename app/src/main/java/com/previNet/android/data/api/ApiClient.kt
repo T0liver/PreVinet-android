@@ -5,7 +5,7 @@ import io.ktor.client.call.body
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.onUpload
-import io.ktor.client.request.forms.InputProvider
+import io.ktor.client.request.forms.ChannelProvider
 import io.ktor.client.request.forms.MultiPartFormDataContent
 import io.ktor.client.request.forms.formData
 import io.ktor.client.request.get
@@ -18,7 +18,9 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
-import io.ktor.utils.io.streams.asInput
+import io.ktor.utils.io.jvm.javaio.toByteReadChannel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
 import kotlinx.serialization.json.Json
 import java.io.File
 import java.io.IOException
@@ -87,7 +89,7 @@ class ApiClient(private val baseUrl: String) {
             files.forEach { file ->
                 append(
                     "images[]",
-                    InputProvider(file.length()) { file.inputStream().asInput() },
+                    ChannelProvider(file.length()) { file.inputStream().toByteReadChannel(Dispatchers.IO) },
                     Headers.build {
                         append(HttpHeaders.ContentType, "image/jpeg")
                         append(HttpHeaders.ContentDisposition, "filename=\"${file.name}\"")
@@ -129,6 +131,8 @@ class ApiClient(private val baseUrl: String) {
 
     private inline fun <T> wrapNetwork(block: () -> T): T = try {
         block()
+    } catch (e: CancellationException) {
+        throw e
     } catch (e: ApiException) {
         throw e
     } catch (e: IOException) {

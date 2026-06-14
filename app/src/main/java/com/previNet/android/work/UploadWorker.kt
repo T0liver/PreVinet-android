@@ -13,6 +13,9 @@ import com.previNet.android.R
 import com.previNet.android.data.api.ApiException
 import com.previNet.android.data.api.Bbox
 import com.previNet.android.data.db.SubmissionState
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.withContext
 import java.io.File
 
 /**
@@ -96,6 +99,11 @@ class UploadWorker(
                 )
                 Result.failure()
             }
+        } catch (e: CancellationException) {
+            withContext(NonCancellable) {
+                dao.updateState(localId, SubmissionState.QUEUED)
+            }
+            throw e
         } catch (e: Exception) {
             dao.updateState(localId, SubmissionState.QUEUED)
             Result.retry()

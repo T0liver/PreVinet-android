@@ -32,6 +32,7 @@ import com.previNet.android.ui.submissions.MySubmissionsScreen
 import com.previNet.android.ui.submit.SubmitScreen
 import com.previNet.android.ui.theme.PreViNetTheme
 import kotlinx.coroutines.launch
+import androidx.core.net.toUri
 
 class MainActivity : ComponentActivity() {
 
@@ -67,7 +68,7 @@ class MainActivity : ComponentActivity() {
 }
 
 /** Host parsed from the API base; the App Link host must match `resultHost` in the manifest. */
-private val resultHost: String = Uri.parse(BuildConfig.API_BASE).host ?: "grape.example.com"
+private val resultHost: String = BuildConfig.API_BASE.toUri().host ?: "grapes.toliver.hu"
 
 object Routes {
     const val SUBMIT = "submit"
