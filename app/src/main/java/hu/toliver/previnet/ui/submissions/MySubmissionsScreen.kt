@@ -215,7 +215,7 @@ private fun SubmissionCard(
             if (firstPhoto != null) {
                 AsyncImage(
                     model = firstPhoto,
-                    contentDescription = null,
+                    contentDescription = stringResource(R.string.submission_thumbnail_cd),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .size(64.dp)
