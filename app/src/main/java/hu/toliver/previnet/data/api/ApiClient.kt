@@ -37,8 +37,11 @@ class ApiClient(private val baseUrl: String) {
     }
 
     /** Prefixes relative backend URLs (e.g. /api/v1/masks/{id}) with the API base. */
-    fun absoluteUrl(url: String): String =
-        if (url.startsWith("http://") || url.startsWith("https://")) url else baseUrl + url
+    fun absoluteUrl(url: String): String = when {
+        url.startsWith("https://") -> url
+        url.startsWith("http://") -> "https://" + url.removePrefix("http://")
+        else -> baseUrl + url
+    }
 
     suspend fun getDiseases(): List<String> = wrapNetwork {
         val response = client.get("$baseUrl/api/v1/diseases")
