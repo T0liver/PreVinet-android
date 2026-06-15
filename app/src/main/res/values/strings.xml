@@ -177,6 +177,10 @@
     <string name="notif_results_text">Tap to see your segmentation results</string>
     <string name="notif_uploading">Uploading photos…</string>
 
+    <!-- Content descriptions for images -->
+    <string name="submission_thumbnail_cd">Submission photo</string>
+    <string name="result_photo_cd">Disease analysis photo</string>
+
     <!-- Errors -->
     <string name="error_400">Invalid data. Please check your photos and try again.</string>
     <string name="error_403">This device has been blocked from submitting.</string>
