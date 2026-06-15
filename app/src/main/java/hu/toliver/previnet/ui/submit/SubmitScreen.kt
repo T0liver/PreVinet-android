@@ -428,7 +428,7 @@ private fun PhotoThumbnail(
             contentAlignment = Alignment.Center,
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .size(32.dp)
+                .size(40.dp)
                 .clip(CircleShape)
                 .background(Color.Black.copy(alpha = 0.6f))
                 .clickable(onClick = onRemove),

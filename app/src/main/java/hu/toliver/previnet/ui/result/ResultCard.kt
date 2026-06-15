@@ -81,6 +81,10 @@ fun ResultCard(
 
     var aspectRatio by remember { mutableFloatStateOf(4f / 3f) }
 
+    val photoContentDesc = image.diseaseLabel
+        ?.let { diseaseNameForSlug(it, diseases) }
+        ?: stringResource(R.string.result_photo_cd)
+
     Card(
         shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -94,7 +98,7 @@ fun ResultCard(
         ) {
             AsyncImage(
                 model = photoModel,
-                contentDescription = null,
+                contentDescription = photoContentDesc,
                 contentScale = ContentScale.FillBounds,
                 onState = { state ->
                     if (state is AsyncImagePainter.State.Success) {
