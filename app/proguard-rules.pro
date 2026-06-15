@@ -1,8 +1,8 @@
 # Keep kotlinx.serialization generated serializers for API DTOs.
--keepclassmembers class com.previNet.android.data.api.** {
+-keepclassmembers class hu.toliver.previnet.data.api.** {
     *** Companion;
 }
--keepclasseswithmembers class com.previNet.android.data.api.** {
+-keepclasseswithmembers class hu.toliver.previnet.data.api.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
 -dontwarn org.slf4j.**

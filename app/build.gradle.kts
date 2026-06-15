@@ -14,11 +14,12 @@ val apiBase: String =
 val resultHost: String = URI(apiBase).host ?: "grapes.toliver.hu"
 
 android {
-    namespace = "com.previNet.android"
+    namespace = "hu.toliver.previnet"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.previNet.android"
+        manifestPlaceholders += mapOf()
+        applicationId = "hu.toliver.previnet"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
