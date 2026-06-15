@@ -18,7 +18,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        manifestPlaceholders += mapOf()
+        manifestPlaceholders += mapOf("resultHost" to resultHost)
         applicationId = "hu.toliver.previnet"
         minSdk = 26
         targetSdk = 35
@@ -26,7 +26,6 @@ android {
         versionName = "1.0"
 
         buildConfigField("String", "API_BASE", "\"$apiBase\"")
-        manifestPlaceholders["resultHost"] = resultHost
     }
 
     buildTypes {
