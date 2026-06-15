@@ -1,8 +1,13 @@
-# PreViNet Android 🍇
+# PreViNet Android
+
+![Kotlin](https://img.shields.io/badge/Kotlin-2.2-7F52FF?logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
+![Min SDK](https://img.shields.io/badge/minSdk-26-informational)
 
 Android field client for the PreViNet grape disease research platform. Vineyard workers photograph diseased vine leaves, annotate them on-device, and receive AI segmentation results — with full offline support for areas with no signal.
 
-## ✨ Features
+## Features
 - **Offline-first queue** — photos are saved locally and uploaded automatically via WorkManager when connectivity returns
 - **Three annotation tiers** — photos only (baseline), photos + disease label (improved), or photos + label + bounding boxes (best quality)
 - **Bounding box canvas** — press-and-drag annotation with per-photo navigation and a 5% minimum size guard
@@ -12,7 +17,7 @@ Android field client for the PreViNet grape disease research platform. Vineyard 
 - **My Submissions history** — live status tracking (Saved → Uploading → Processing → Results ready / Failed)
 - **App Links + notifications** — `https://<your-domain>/result/{id}` opens directly in-app; local reminder fires at 18:00 on submission day
 
-## 🖥️ Example Output
+## Example Output
 ```
 [ Camera / Gallery ] → Submit screen
         ↓ (offline? queued in Room + WorkManager)
@@ -21,7 +26,7 @@ Android field client for the PreViNet grape disease research platform. Vineyard 
 [ Result screen: local photo + magenta mask overlay + correction sheet ]
 ```
 
-## 🚀 How to Run
+## How to Run
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/T0liver/PreVinet-android.git
@@ -44,7 +49,7 @@ PREVINET_API_BASE=https://your-server.example.com
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 - Kotlin 2.2 + Jetpack Compose (Material 3)
 - Room 2.8 — local submission database (KSP)
 - WorkManager 2.10 — network-constrained background uploads
@@ -54,7 +59,7 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 - Navigation Compose — single-activity, deep-link-aware nav graph
 - Manual DI via `AppContainer` — no Hilt/Koin
 
-## 📁 Project Structure
+## Project Structure
 ```
 app/src/main/java/com/previNet/android/
 ├── PreViNetApp.kt          Application + AppContainer (manual DI)
@@ -83,15 +88,15 @@ app/src/main/java/com/previNet/android/
     └── Haptics.kt
 ```
 
-## 📈 Recent Changes
+## Recent Changes
 - docs: rewrite README with full project documentation
 - chore: add Gradle wrapper properties
 - chore: add .gitignore
 - docs: add project specification and implementation prompt
 - feat: wire up Application class, DI container, nav host, and manifest
 
-## 🤝 Contributing
+## Contributing
 Fork the repository and submit pull requests.
 
-## 📝 License
+## License
 See [LICENSE](LICENSE).
