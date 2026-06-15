@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-mode window background matches DarkBackground from Color.kt (#131510). -->
+    <style name="Theme.PreViNet" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#131510</item>
+    </style>
+</resources>
