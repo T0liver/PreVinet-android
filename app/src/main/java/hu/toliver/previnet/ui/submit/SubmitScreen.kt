@@ -82,6 +82,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
 import hu.toliver.previnet.R
 import hu.toliver.previnet.appContainer
+import hu.toliver.previnet.data.Disease
 import hu.toliver.previnet.ui.components.OfflineBanner
 import hu.toliver.previnet.ui.components.TierIndicator
 import hu.toliver.previnet.ui.theme.Spacing
@@ -519,8 +520,8 @@ private fun AddMoreTile(onTakePhoto: () -> Unit, onPickGallery: () -> Unit) {
 
 @Composable
 private fun AnnotationCard(
-    diseases: List<hu.toliver.previnet.data.Disease>,
-    selectedDisease: hu.toliver.previnet.data.Disease?,
+    diseases: List<Disease>,
+    selectedDisease: Disease?,
     tier: Int,
     showBboxHelper: Boolean,
     onOpenDiseasePicker: () -> Unit,
