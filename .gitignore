@@ -3,9 +3,6 @@ build/
 app/build/
 .gradle/
 
-# Gradle wrapper jar (binary)
-gradle/wrapper/gradle-wrapper.jar
-
 # Local environment
 local.properties
 
