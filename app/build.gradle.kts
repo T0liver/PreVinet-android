@@ -15,7 +15,7 @@ val resultHost: String = URI(apiBase).host ?: "grapes.toliver.hu"
 
 android {
     namespace = "hu.toliver.previnet"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         manifestPlaceholders += mapOf("resultHost" to resultHost)
@@ -23,13 +23,23 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
 
         buildConfigField("String", "API_BASE", "\"$apiBase\"")
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("release.jks").takeIf { it.exists() }
+            storePassword = System.getenv("SIGNING_STORE_PASSWORD")
+            keyAlias = System.getenv("SIGNING_KEY_ALIAS")
+            keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
