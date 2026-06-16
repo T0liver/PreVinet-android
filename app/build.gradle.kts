@@ -15,7 +15,7 @@ val resultHost: String = URI(apiBase).host ?: "grapes.toliver.hu"
 
 android {
     namespace = "hu.toliver.previnet"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         manifestPlaceholders += mapOf("resultHost" to resultHost)
